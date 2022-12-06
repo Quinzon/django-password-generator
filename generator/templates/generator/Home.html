@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../static/css/Style.css">
+	</head>
+	<body>
+		<header>
+			<div class="header">
+                <h1>Password Generator</h1>
+            </div>
+		</header>
+        <main>
+            <div class="params">
+                <form action="{% url 'password' %}">
+                    <div class="length">
+                        <select name="length">
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                            <option value="8">8</option>
+                            <option value="10" selected="selected">10</option>
+                            <option value="12">12</option>
+                            <option value="14">14</option>
+                            <option value="16">16</option>
+                        </select>
+                        <span>Длинна пароля</span>
+                    </div>
+                    
+                    <div class="checkboxes">
+                        <label for="numbers">
+                            <input type="checkbox" name="numbers" id="numbers" /> Числа
+                            <br>
+                        </label>
+                        <label for="uppercase">
+                            <input type="checkbox" name="uppercase" id="uppercase" /> Верхний регистр
+                            <br>
+                        </label>
+                        <label for="special">
+                            <input type="checkbox" name="special" id="special" /> Специальные символы
+                            <br>
+                        </label>
+                    </div>
+                    <input type="submit" value="Сгенерировать пароль" class="button">
+                </form>
+            </div>
+            <div class="about">
+                <a href="{% url 'about' %}">About</a>
+            </div>
+        </main>
+	</body>
+</html>
