@@ -4,7 +4,7 @@ import random
 
 
 def home(request):
-    return render(request, 'generator/home.html')
+    return render(request, 'generator/Home.html')
 
 
 def password(request):
@@ -27,4 +27,4 @@ def password(request):
 
 
 def about(request):
-    return render(request, 'generator/about.html')
+    return render(request, 'generator/About.html')
